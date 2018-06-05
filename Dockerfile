@@ -11,8 +11,7 @@ WORKDIR /tools
 RUN git clone https://github.com/bedops/bedops.git && \
      cd bedops && \
      make && \
-     make install
-
-RUN cp bin/* /usr/local/bin
+     make install && \
+     cp bin/* /usr/local/bin
 
 WORKDIR /
